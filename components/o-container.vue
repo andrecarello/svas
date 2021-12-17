@@ -1,9 +1,12 @@
 <template>
-  <div :class="$style.container"><slot /></div>
+  <div :class="[ $style.container, padding && $style.padding ]"><slot /></div>
 </template>
 <script>
 export default {
-  name: "OContainer"
+  name: "OContainer",
+  props: {
+    padding: { type: Boolean, default: true }
+  }
 }
 </script>
 <style module>
@@ -11,6 +14,9 @@ export default {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
+  position: relative;
+}
+.padding {
   padding: 0 20px;
 }
 </style>

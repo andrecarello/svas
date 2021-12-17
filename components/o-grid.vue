@@ -23,9 +23,8 @@ export default {
 </script>
 <style module>
 .flex {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   overflow: auto;
 }
@@ -35,13 +34,14 @@ export default {
   width: 100%;
   flex: 0 0 110px;
   height: 110px;
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border-radius: 20px;
-  background: linear-gradient(var(--color-blue-500), var(--color-blue-800));
+  background: linear-gradient(var(--sqr-degrees), var(--sqr-primary), var(--sqr-secondary));
 }
 
 .flex > * > * {

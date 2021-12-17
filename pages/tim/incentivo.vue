@@ -1,8 +1,7 @@
 <template>
   <div :class="$style.page">
-    <o-container>
-
-      <hooper height="auto">
+    <o-container :padding="false">
+      <hooper style="height: 168px" :wheel-control="false" :auto-play="true" :play-speed="4000">
         <slide>
           <img :class="$style.image" src="/images/incentivo-1.jpg" alt="Incentivo 1" />
         </slide>
@@ -10,7 +9,9 @@
           <img :class="$style.image" src="/images/incentivo-2.jpg" alt="Incentivo 2" />
         </slide>
       </hooper>
-      <o-spacer top="-10" />
+    </o-container>
+    <o-container>
+      <o-spacer top="-25" />
       <o-button href="#" download="true" color="green" :center="true">Baixar o TIM+</o-button>
       <o-spacer bottom="24" />
 
@@ -50,11 +51,11 @@
 import { Hooper, Slide } from 'hooper';
 import 'hooper/dist/hooper.css';
 
-import OButton from "../components/o-button";
-import OContainer from "../components/o-container";
-import OText from "../components/o-text";
-import OSpacer from "../components/o-spacer";
-import OGrid from "../components/o-grid";
+import OButton from "../../components/o-button";
+import OContainer from "../../components/o-container";
+import OText from "../../components/o-text";
+import OSpacer from "../../components/o-spacer";
+import OGrid from "../../components/o-grid";
 
 export default {
   name: "TimIncentivo",
@@ -72,9 +73,17 @@ export default {
 }
 </script>
 
+<style>
+:root {
+  --sqr-degrees: 180deg;
+  --sqr-primary: var(--color-blue-500);
+  --sqr-secondary: var(--color-blue-800);
+}
+</style>
 <style module>
 .page {
   background-color: var(--color-blue-800);
+  flex-grow: 1;
 }
 
 .image {

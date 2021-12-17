@@ -38,14 +38,14 @@ export default {
 </script>
 <style module>
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 169px;
+  width: auto;
   height: 42px;
-  padding: 0 10px;
+  padding: 0 15px;
   border-radius: 10px;
+  border: 1px solid transparent;
 
   text-decoration: none !important;
   cursor: pointer;
@@ -60,6 +60,7 @@ export default {
 .green {
   color: var(--color-white);
   background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 
 /* ROUNDNESS */

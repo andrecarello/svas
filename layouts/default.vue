@@ -1,10 +1,7 @@
 <template>
   <div :class="$style.layout">
     <o-nav />
-
-    <div :class="$style.content">
-      <nuxt />
-    </div>
+    <nuxt />
 
     <div :class="$style.footer">
       <tim />
@@ -36,6 +33,7 @@ export default {
 
   --color-secondary: #30A500;
   --color-white: #ffffff;
+  --color-black: #000000;
 
   --container-width: 454px;
 }
@@ -80,9 +78,6 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.content {
-  flex-grow: 1;
 }
 .footer {
   display: flex;

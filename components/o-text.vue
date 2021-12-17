@@ -45,6 +45,7 @@ strong {
 .white { color: var(--color-white); }
 .green { color: var(--color-secondary); }
 .blue { color: var(--color-blue-800); }
+.black { color: var(--color-black); }
 
 /* ALIGNMENT */
 .center { text-align: center }
