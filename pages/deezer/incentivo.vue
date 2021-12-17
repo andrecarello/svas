@@ -78,7 +78,7 @@ export default {
 .image {
   display: block;
   width: 100%;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 35px;
 }
 </style>

@@ -1,43 +1,40 @@
 <template>
   <div :class="$style.page">
     <o-container :padding="false">
-      <img :class="$style.image" src="/images/engajamento-1.jpg" alt="Engajamento 1" />
+      <img :class="$style.image" src="/images/deezer-engajamento-1.jpg" alt="Engajamento 1" />
     </o-container>
 
-    <o-spacer bottom="6" />
     <o-container>
+      <o-spacer bottom="24" />
+      <o-text color="black" align="center" width="231">
+        Ei, suas <strong>playlists personalizadas</strong> estão te esperando!
+      </o-text>
+      <o-spacer bottom="7" />
+      <o-text color="black" align="center" width="231">
+        Aumente o som, coloque a sua música favorita e vem com a gente!
+      </o-text>
+      <o-spacer bottom="7" />
 
-      <div :class="$style.discount">
-        <o-text align="center" color="black">
-          Já conferiu as novas ofertas do TIM + Vantagens? Então corre no App que tá cheio de <strong>desconto exclusivo</strong> esperando por você!
-          E ainda:
-        </o-text>
-
-        <img :class="$style.discount_image" src="/images/engajamento-4.jpg" alt="Engajamento 4" />
-      </div>
-
-      <o-spacer bottom="8" />
-      <o-grid :data="[
-        { text: 'Ganhe descontos e pacotes de internet;', fontSize: '14px' },
-        { text: 'Sorteios semanais de prêmios incríveis;', fontSize: '14px' },
-        { text: 'Sempre um desconto novo exclusivo para você!', fontSize: '14px' }
-      ]">
-      </o-grid>
+      <o-grid cols="3" :data="[
+        { text: 'Navegue no\naplicativo sem\ndescontar da\nsua internet!', fontSize: '14px' },
+        { text: 'Pule de\nmúsicas\nquantas\nvezes quiser', fontSize: '14px' },
+        { text: 'Acesso\na mais de\n73 milhões\nde músicas!', fontSize: '14px' },
+      ]" />
 
       <o-spacer bottom="24" />
       <o-center>
-        <o-button color="green">Acessar o TIM+</o-button>
+        <o-button href="#" color="green">Acessar meu Deezer Go</o-button>
       </o-center>
+      <o-spacer bottom="24" />
     </o-container>
 
-    <o-spacer bottom="16" />
     <o-container :padding="false">
-      <hooper :center-mode="true" :items-to-show="1.25" :wheel-control="false" :style="{ height: 'auto' }">
+      <hooper :wheel-control="false" :center-mode="true" :items-to-show="1.25" :style="{ height: 'auto' }">
         <slide :class="$style.hooper_slide">
-          <img :class="$style.hooper_image" src="/images/engajamento-2.jpg" alt="Engajamento 2" />
+          <img :class="$style.hooper_image" src="/images/deezer-engajamento-2.jpg" alt="Engajamento 2" />
         </slide>
         <slide :class="$style.hooper_slide">
-          <img :class="$style.hooper_image" src="/images/engajamento-3.jpg" alt="Engajamento 3" />
+          <img :class="$style.hooper_image" src="/images/deezer-engajamento-3.jpg" alt="Engajamento 2" />
         </slide>
 
         <hooper-pagination slot="hooper-addons" :class="$style.hooper_dots" />
@@ -49,11 +46,11 @@
 import { Hooper, Slide, Pagination as HooperPagination } from 'hooper';
 import 'hooper/dist/hooper.css';
 
-import OButton from "../../components/o-button";
 import OContainer from "../../components/o-container";
 import OText from "../../components/o-text";
 import OSpacer from "../../components/o-spacer";
 import OGrid from "../../components/o-grid";
+import OButton from "../../components/o-button";
 import OCenter from "../../components/o-center";
 
 export default {
@@ -61,14 +58,14 @@ export default {
   layout: "default",
   components: {
     OCenter,
+    OButton,
+    OGrid,
+    OSpacer,
+    OText,
     Hooper,
     Slide,
     HooperPagination,
 
-    OGrid,
-    OSpacer,
-    OText,
-    OButton,
     OContainer
   },
 }
@@ -76,9 +73,9 @@ export default {
 
 <style>
 :root {
-  --sqr-degrees: 180deg;
-  --sqr-primary: var(--color-blue-500);
-  --sqr-secondary: var(--color-blue-800);
+  --sqr-degrees: -45deg;
+  --sqr-primary: #65CF78;
+  --sqr-secondary: #1EA3CC;
 }
 </style>
 <style module>

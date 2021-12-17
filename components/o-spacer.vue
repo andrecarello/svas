@@ -1,5 +1,7 @@
 <template>
   <div :style="{
+    height: '1px',
+    width: '1px',
     marginTop: this.top && this.size(this.top),
     marginBottom: this.bottom && this.size(this.bottom),
     marginLeft: this.left && this.size(this.left)
@@ -15,7 +17,7 @@ export default {
   },
   methods: {
     size(value) {
-      return value === "auto" ? "auto" : value+"px"
+      return value === "auto" ? "auto" : (value - 1)+"px"
     }
   },
 }

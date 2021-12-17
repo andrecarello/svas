@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.page">
     <o-container :padding="false">
-      <hooper style="height: 168px" :wheel-control="false" :auto-play="true" :play-speed="4000">
+      <hooper :wheel-control="false" :auto-play="true" :play-speed="4000" :style="{ height: 'auto' }">
         <slide>
           <img :class="$style.image" src="/images/incentivo-1.jpg" alt="Incentivo 1" />
         </slide>
@@ -12,7 +12,9 @@
     </o-container>
     <o-container>
       <o-spacer top="-25" />
-      <o-button href="#" download="true" color="green" :center="true">Baixar o TIM+</o-button>
+      <o-center>
+        <o-button href="#" download="true" color="green">Baixar o TIM+</o-button>
+      </o-center>
       <o-spacer bottom="24" />
 
       <o-text align="center" width="320">
@@ -35,7 +37,9 @@
       </o-grid>
 
       <o-spacer bottom="24" />
-      <o-button href="#" download="true" color="green" :center="true">Baixar o TIM+</o-button>
+      <o-center>
+        <o-button href="#" download="true" color="green">Baixar o TIM+</o-button>
+      </o-center>
 
       <o-spacer bottom="24" />
       <o-text align="center">
@@ -56,11 +60,13 @@ import OContainer from "../../components/o-container";
 import OText from "../../components/o-text";
 import OSpacer from "../../components/o-spacer";
 import OGrid from "../../components/o-grid";
+import OCenter from "../../components/o-center";
 
 export default {
   name: "TimIncentivo",
   layout: "default",
   components: {
+    OCenter,
     Hooper,
     Slide,
 
@@ -89,7 +95,7 @@ export default {
 .image {
   display: block;
   width: 100%;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
 </style>
